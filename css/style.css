@@ -1,0 +1,449 @@
+/* --- Variables y Estilos Generales --- */
+:root {
+    --primary-color: #005A9C; /* Un azul corporativo */
+    --secondary-color: #E87722; /* Un naranja para acentos/botones */
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --font-family: 'Helvetica', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background: #fff;
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* --- Encabezado y Navegación --- */
+.header {
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 50px; /* Ajusta el tamaño de tu logo */
+}
+
+.header .navigation ul {
+    list-style: none;
+    display: flex;
+}
+
+.header .navigation ul li {
+    margin-left: 20px;
+}
+
+.header .navigation a {
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header .navigation a:hover,
+.header .navigation a.active {
+    color: var(--secondary-color);
+}
+
+/* --- Botones --- */
+.btn-cta {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #d46813;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #004b82;
+}
+
+
+/* --- Estilos de la Página de Inicio --- */
+.hero {
+    background: var(--light-color);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.featured-services {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-item {
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* --- Pie de Página --- */
+.footer {
+    background: var(--dark-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* --- Estilos Adicionales --- */
+/* --- Estilos Página Quiénes Somos --- */
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Estilos Generales para Páginas Interiores --- */
+.page-header {
+    background: var(--light-color);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-header h1 {
+    color: var(--primary-color);
+}
+
+.content-section {
+    padding: 3rem 0;
+}
+
+/* --- Página de Servicios --- */
+.service-detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.service-card ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+
+.service-card ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Banner de Llamada a la Acción (CTA) --- */
+.cta-banner {
+    text-align: center;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 2.5rem;
+    border-radius: 5px;
+    margin-top: 3rem;
+}
+
+.cta-banner h2 {
+    margin-bottom: 1rem;
+}
+
+.cta-banner p {
+    margin-bottom: 1.5rem;
+}
+
+.cta-banner .btn-primary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.cta-banner .btn-primary:hover {
+    background: #d46813;
+}
+
+/* --- Página de Catálogo --- */
+.section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.section-title-spacer {
+    margin-top: 3rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.product-item h4 {
+    color: var(--primary-color);
+}
+
+/*CODIGO PARA HACER ZOOM A IMAGENES */
+.imagen_con_zoom {
+  /* Opcional: Define un tamaño inicial si lo necesitas */
+  width: 200px;
+  height: auto; /* Mantiene la proporción */
+
+  /* Define la transición para que el cambio de tamaño sea suave */
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagen_con_zoom:hover {
+  /* Escala la imagen a 1.2 veces su tamaño original al pasar el ratón */
+  transform: scale(1.5);
+}
+
+/* --- Formularios (Cita y Contacto) --- */
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Página de Contacto --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.contact-info h3 {
+    color: var(--primary-color);
+    margin-top: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* --- Estilos para el Menú Hamburguesa --- */
+.hamburger {
+    display: none; /* Oculto en escritorio */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+.hamburger-line {
+    width: 2rem;
+    height: 0.25rem;
+    background: var(--dark-color);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+/* --- ESTILOS RESPONSIVOS --- */
+/* Para tablets y móviles (768px o menos) */
+@media (max-width: 768px) {
+    .header .container {
+        flex-wrap: wrap;
+    }
+
+    /* Ocultar navegación de escritorio y mostrar botón hamburguesa */
+    .navigation {
+        display: none; /* Ocultamos el nav por defecto */
+        width: 100%;
+    }
+    .navigation.show {
+        display: block; /* Lo mostramos cuando tiene la clase 'show' */
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding-top: 1rem;
+    }
+    .navigation ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex; /* Mostramos el botón */
+    }
+    
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    /* Grids a una sola columna */
+    .services-grid,
+    .product-grid,
+    .service-detailed-grid,
+    .contact-grid,
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustes de texto y espaciado */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles para el catálogo */
+    }
+
+    .contact-grid {
+        text-align: center; /* Centrar texto de contacto en móvil */
+    }
+
+    .contact-info h3 {
+        display: block; /* Para que el borde ocupe todo el ancho */
+    }
+}
+
+/* Para móviles más pequeños (480px o menos) */
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 columna en móviles muy pequeños */
+    }
+
+    .btn-cta {
+        display: none; /* Opcional: ocultar el botón CTA principal en móviles muy pequeños */
+    }
+}
